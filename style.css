@@ -39,7 +39,6 @@
 }
 
 #home {
-    background-color: rgb(236, 227, 227);
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -50,6 +49,7 @@
     text-align: center;
     align-items: center;
     flex-direction: column;
+    background-image: url(./image/background2.avif);
 }
 
 .image1 {
@@ -61,7 +61,15 @@
     top: 100px;
     left: 200px;
     border-radius: 200px;
+}
 
+.img {
+    position: absolute;
+    height: 100%;
+    bottom: 0px;
+    left: 100%;
+    transform: translateX(-100%);
+    transition: bottom 2s, left 1s;
 }
 
 #username {
@@ -69,20 +77,20 @@
     font-size: 40px;
     margin-bottom: 10px;
     font-family: "Roboto", sans-serif;
-    margin-left: 500px;
     font-weight: 300px;
-    color: rgb(15, 16, 17);
+    color: rgb(249, 250, 250);
 }
 
 #user-details {
     font-size: 20px;
     margin-bottom: 0px;
     font-family: "Roboto", sans-serif;
-    margin-left: 500px;
+    margin-left: 0px;
     font-weight: 100px;
-    color: rgb(2, 11, 19);
+    color: rgb(244, 246, 247);
 }
-#download{
+
+#download {
     text-decoration: none;
     background-color: rgb(7, 6, 6);
     color: rgb(235, 227, 227);
@@ -90,62 +98,122 @@
     margin-top: 30px;
     border-radius: 20px;
     display: inline-block;
-    margin-left: 150px;
+    margin-left: 20px;
+    margin-right: 0px;
+}
+/* about */
+body{
+    background-image: url(./image/background2.avif);
+    width: 100%;
+    height: 100vh;
+    
 }
 #about{
-    margin: 40px 15% 30px 20%;
-   
+    margin: 8% 18% 20% 20%;
 }
-.sectionhead{
-    text-align: center;
+.container{
+    width: 90%;
+    max-width: 950px;
+    margin: 40px;
+    padding: 20px;
 }
 .mainhead{
     font-size: 45px;
     text-align: center;
-
+    color: white;
+   
 }
-.subhead{
-    font-size: 20px;
-    color: blue;
-}
-.aboutbody{
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 2,1rem;
+    
+.image{
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    background: fixed;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0);
+    padding: 20px;
+   
 }
-    
-.Img1{
- width:80%;
-border-radius: 10px;
-    
+.img1{
+    width: 200px;
+    border-radius: 85%;
+    height: 30vh;
 }
-.aboutcontent{
+.aboutsection{
+    margin-top: 1.4rem;
+    font-size: 20px;
+    color: white;
+}
+.aboutcontent {
     font-size: 20px;
     text-align: justify;
 }
+
+.inbox{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+   
+}
+.inbox>span{
+    margin-left: 2rem;
+}
+/* skills */
 #skills{
-    margin: 50% 8% 0% 8% ; 
+   margin: 8% 20% 20% 20%;
 }
-.skillpro{
+.skillhead{
     text-align: center;
-    font-size: 35px;
-    font-weight: 700px;
- }
-
-.skill-content {
-  padding: 20px;
-  text-align: left;
-  
-  
+    font-size: 25px;
+    color: white;
+    
 }
-.list-item{
-    font-size: 20px;
-    margin-top: 2px;
-
+.skillcontent{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+    margin-top: 20px;
 }
- #contact{
+.bars{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 1rem 0px;
+    color: white;
+}
+.barhead,.barpercent{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.basebar{
+    width: 100%;
+    height: 0.5rem;
+    background-color: rgb(219, 228, 219);
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0px;
+}
+.hbar{
+    background-color:  rgb(175, 59, 6);
+    width: 95%;
+   
+}
+.csbar{
+    background-color: rgb(175, 59, 6);
+    width: 85%;
+}
+.jbar{
+    background-color: rgb(175, 59, 6);
+    width: 78%;
+}
+.cbar{
+    background-color:  rgb(175, 59, 6);
+    width: 75%;
+}
+/* contact */
+#contact{
     margin: 8% 8% 0px 8%;
 }
 .iconcollection{
@@ -153,24 +221,23 @@ border-radius: 10px;
     justify-content: center;
     align-items: center;
     margin-top: 5%;
-    background-color: rgb(223, 235, 235);
 }
 .icon{
-    background-color: rgb(212, 228, 228);
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    /* background-color: rgb(160, 82, 147); */
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0px 10px;
 }
 .brands{
-    color: black;
+    color: white;
     font-size: 2rem;
 }
 .icon:hover{
-    background-image:linear-gradient(to bottom right,rgb(27, 13, 153),rgb(107, 7, 74),rgb(212, 14, 179));
+    background-image:linear-gradient(to bottom right,rgb(16, 61, 184),rgb(50, 184, 224),rgb(227, 241, 230));
 }
 .icon:hover .brands{
     color:rgb(245, 243, 243);
@@ -197,6 +264,7 @@ footer{
 #copyright{
     text-align: center;
     font-weight: 400;
+    color: white;
 }
 .upArrow{
     float: right;
@@ -210,11 +278,37 @@ html{
     border-radius: 10px;
 }
 ::-webkit-scrollbar-track{
-    background-color: rgb(9, 51, 51);
+    background-color: rgb(18, 24, 24);
 }
 ::-webkit-scrollbar-thumb{
-    background-color: rgb(213, 213, 226);
+    background-color: rgb(123, 194, 123);
     border-radius: 10px;
 }
+@media(max-width:760px){
+    
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgb(182, 165, 145);
+    }
+    .navbar .list-items{
+        display: block;
+        text-align: center;
+        font-size: 1.1rem;
+        margin: 1.5rem 0px;
+
+    }
+   .container{
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+
 
 
